@@ -4,22 +4,27 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <District name="Noyakhli" speciality="Vibhag"></District>
+      <District name="Bhola" speciality="Nature of beauty"></District>
+      <District name="Shylet" speciality="Nature of hill"></District>
+      <District name="Cox's Bazar" speciality="Nature of ochen"></District>
     </div>
   );
 }
+const containerStyle={
+  backgroundColor:"lightblue",
+  margin:'20px',
+  padding:'20px',
+  borderRadious:"20px"
 
+}
+
+function District(props){
+  return(
+    <div style={containerStyle}>
+      <h2>Name:{props.name}</h2>
+      <h4>Speciality:{props.speciality}</h4>
+    </div>
+  )
+}
 export default App;
